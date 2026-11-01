@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
-import { servicios, campuses } from "@/data/defider";
+import { servicios, campusesSantiago } from "@/data/defider";
 
 export const Route = createFileRoute("/reservas/$servicio")({
   loader: ({ params }) => {
@@ -33,7 +33,7 @@ function nextDays(n: number) {
 function Page() {
   const s = Route.useLoaderData();
   const days = nextDays(6);
-  const [campus, setCampus] = useState(campuses[0]);
+  const [campus, setCampus] = useState(campusesSantiago[0]);
   const [opcion, setOpcion] = useState(s.opciones?.[0] ?? "");
   const [dia, setDia] = useState(0);
   const [bloque, setBloque] = useState<string | null>(null);
@@ -72,7 +72,7 @@ function Page() {
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="space-y-1 text-sm font-semibold">Campus
             <select className={field} value={campus} onChange={(e) => setCampus(e.target.value as typeof campus)}>
-              {campuses.map((c) => <option key={c}>{c}</option>)}
+              {campusesSantiago.map((c) => <option key={c}>{c}</option>)}
             </select>
           </label>
           {s.opciones && (
