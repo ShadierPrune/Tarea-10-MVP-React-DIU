@@ -1,5 +1,6 @@
 export type Campus = "Casa Central" | "Vitacura" | "San Joaquín";
 export const campuses: Campus[] = ["Casa Central", "Vitacura", "San Joaquín"];
+export const campusesSantiago: Campus[] = ["San Joaquín", "Vitacura"];
 
 export const selecciones = [
   { nombre: "Atletismo", campus: "Casa Central / San Joaquín", entrenamiento: "Lun y Mié 18:00–20:00" },
@@ -51,6 +52,7 @@ export type Servicio = {
   opciones?: string[];
   bloques: string[];
   cupos: number;
+  url?: string; // link opcional para cada servicio
 };
 
 export const servicios: Servicio[] = [
@@ -60,6 +62,7 @@ export const servicios: Servicio[] = [
     descripcion: "Reserva un bloque de 1 hora en la sala de musculación de tu campus.",
     bloques: ["08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00"],
     cupos: 20,
+    url: "https://reservasgimnasiosantiago.cl/",
   },
   {
     slug: "taller-spinning",
@@ -67,6 +70,7 @@ export const servicios: Servicio[] = [
     descripcion: "Asegura tu bicicleta para la próxima clase de spinning.",
     bloques: ["13:00", "18:00", "19:00"],
     cupos: 15,
+    url: "https://spinningusm.purendurence.pro/",
   },
   {
     slug: "canchas",
