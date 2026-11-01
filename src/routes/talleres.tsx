@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Clock, MapPin } from "lucide-react";
+import { Clock, MapPin, Contact, User } from "lucide-react";
 import { SiteLayout, PageHero } from "@/components/SiteLayout";
 import { campuses, talleres, type Campus } from "@/data/defider";
 import img from "@/assets/talleres.jpg";
@@ -46,7 +46,8 @@ function Page() {
                 <h2 className="bar-accent mt-2 text-xl font-bold text-overlay-foreground">{t.nombre}</h2>
               </div>
               <div className="space-y-3 p-5">
-                <p className="flex items-center gap-2 text-sm text-muted-foreground"><MapPin className="h-4 w-4" />{t.lugar}</p>
+                  <p className="flex items-center gap-2 text-sm font-semibold"><User className="h-4 w-4 text-primary" />{t.profesor}</p>
+                <p className="flex items-center gap-2 text-sm font-semibold"><MapPin className="h-4 w-4" />Recinto: {t.lugar}</p>
                 <div>
                   <p className="flex items-center gap-2 text-sm font-semibold"><Clock className="h-4 w-4 text-primary" />Horario de clases</p>
                   <ul className="mt-2 space-y-1 pl-6 text-sm">

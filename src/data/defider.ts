@@ -16,31 +16,50 @@ export const selecciones = [
   { nombre: "Escalada", campus: "Casa Central", entrenamiento: "Mié y Vie 18:00–20:00" },
 ];
 
-export type Taller = { nombre: string; area: string; horario: string[]; lugar: string };
+export type Taller = { nombre: string; area: string; horario: string[]; lugar: string; profesor: string };
 
 export const talleres: Record<Campus, Taller[]> = {
   "Casa Central": [
-    { nombre: "Ajedrez", area: "Deportivo", horario: ["Martes 17:00–18:30", "Jueves 17:00–18:30"], lugar: "Sala de Ajedrez" },
-    { nombre: "Básquetbol", area: "Deportivo", horario: ["Lunes 18:00–19:30", "Miércoles 18:00–19:30"], lugar: "Gimnasio Central" },
-    { nombre: "Futsal", area: "Deportivo", horario: ["Martes 19:00–20:30", "Jueves 19:00–20:30"], lugar: "Gimnasio Central" },
-    { nombre: "Gimnasia Artística", area: "Deportivo", horario: ["Lunes 16:00–17:30", "Miércoles 16:00–17:30"], lugar: "Sala Multiuso" },
-    { nombre: "Spinning", area: "Acondicionamiento", horario: ["Lunes 13:00–14:00", "Miércoles 13:00–14:00", "Viernes 13:00–14:00"], lugar: "Sala de Spinning" },
-    { nombre: "Yoga", area: "Bienestar", horario: ["Martes 13:00–14:00", "Jueves 13:00–14:00"], lugar: "Sala Multiuso" },
-    { nombre: "Danza Contemporánea", area: "Artístico", horario: ["Viernes 16:00–18:00"], lugar: "Sala de Danza" },
+    { profesor: "Profesor: Raúl Molina Muñoz", nombre: "Ajedrez", area: "Deportivo", horario: ["Jueves: 12:30 – 13:40"], lugar: "Sala de Estar" },
+    { profesor: "Profesor: Antonio López Pérez" , nombre: "Básquetbol", area: "Deportivo", horario: ["Viernes: 14:40 - 15:50"], lugar: "Cancha 5x5" },
+    { profesor: "Profesor: Pablo Fernández Troncoso", nombre: "Futsal", area: "Deportivo", horario: ["Lunes: 17:30 - 18:40", "Jueves 17:30 - 18:40"], lugar: "Cancha 7x7" },
+    { profesor: "Profesor: Bruce Gallardo", nombre: "Gimnasia Artística", area: "Deportivo", horario: ["Martes y Jueves: 12:30 - 13:40"], lugar: "Gimnasio 1" },
+    { profesor: "Profesor: Gastón Vergara Verdejo", nombre: "Judo", area: "Deportivo", horario:["Lunes: 18:50 - 20:00", "Miércoles: 18:50 - 20:00 y 20:15 - 21:25"], lugar: "Sala Multiuso Gimnasio 3"},
+    { profesor: "Profesor: Germán Oliveros Santos", nombre: "Karate", area: "Deportivo", horario: ["Martes: 12:30 - 13:40"], lugar: "Sala Multiuso Gimnasio 3" },
+    { profesor: "Profesor: Miguel Gonzalez Vergara", nombre: "Running", area:"Deportivo", horario: ["Martes y Jueves: 11:05 - 12:15"],  lugar: "Pista Atlética Estadio USM"},
+    { profesor: "Profesor: Sebastián Aguilar Gajardo", nombre: "Taekwondo", area: "Deportivo", horario:["Martes: 18:50 - 20:00","Viernes: 17:30 - 18:40"], lugar: "Gimnasio 2"},
+    { profesor: "Profesor: Enrique Cabello Contreras", nombre: "Tenis", area: "Deportivo", horario:["Jueves: 11:05 - 11:15"], lugar: "Cancha Tenis"},
+    { profesor: "Profesor: Antonio López Pérez", nombre: "Ultimate Frisbee", area: "Deportivo", horario:["Viernes: 14:40 - 15:50"], lugar: "Estadio USM"},
+    { profesor: "Profesor: Jorge Botau Mancilla", nombre: "Vóleibol", area: "Deportivo", horario:["Martes: 12:30 - 13:40"], lugar: "Gimnasio 2"},
+    { profesor: "Profesores: \r\n Gonzalo Riesco Camus y Jorge Botau Mancilla", nombre: "Entrenamiento Funcional", area: "Fitness", horario: ["Martes: 9:40 - 10:50","Viernes: 12:30 - 13:40"], lugar: "Sala Multiuso Gimnasio 3"},
+    { profesor: "Profesor: Gonzalo Riesco Camus y Jorge Botau Mancilla", nombre: "GAP", area: "Fitness", horario: ["Jueves: 14:40 - 15:50", "Viernes: 09:40 - 10:50"], lugar: "Sala Multiuso Gimnasio 3" },
+    { profesor: "Profesora: Nicole Monsalve Vargas", nombre: "Pilates", area: "Fitness", horario: ["Lunes: 16:05 - 17:15", "Jueves: 12:30 - 13:40"], lugar: "Sala Multiuso Gimnasio 3"  },
+    { profesor: "Profesor: Gonzalo Riesco Camus y Jorge Botau Mancilla", nombre: "TRX", area: "Fitness", horario: ["Martes: 11:05 - 12:15", "Viernes: 11:05 - 12:15"], lugar: "Sala Multiuso Gimnasio 3" },
+    { profesor: "Profesoras: Nicole Monsalve Vargas y Claudia Alcaíno Arce",nombre: "Yoga", area: "Fitness", horario: ["Lunes: 11:05 - 12:15", "Jueves: 16:05 - 17:15", "Viernes: 14:40 a 15:50"], lugar: "Sala Multiuso Gimnasio 3" },
   ],
   Vitacura: [
-    { nombre: "Básquetbol 3x3", area: "Deportivo", horario: ["Martes 18:00–19:30", "Jueves 18:00–19:30"], lugar: "Multicancha" },
-    { nombre: "Karate", area: "Deportivo", horario: ["Lunes 19:00–20:30", "Miércoles 19:00–20:30"], lugar: "Sala Multiuso" },
-    { nombre: "Funcional", area: "Acondicionamiento", horario: ["Lunes 13:00–14:00", "Jueves 13:00–14:00"], lugar: "Sala de Musculación" },
-    { nombre: "Pilates", area: "Bienestar", horario: ["Miércoles 13:00–14:00"], lugar: "Sala Multiuso" },
+    { profesor: "Profesor: Felipe Reyes Sangermani", nombre: "Básquetbol 3x3", area: "Deportivo", horario: ["Lunes: 13:40 - 14:40"], lugar: "Gimnasio" },
+    { profesor: "Profesor: Patricio Cifra Abarca", nombre: "Karate", area: "Deportivo", horario: ["Martes: 12:30 - 13:40 "], lugar: "Gimnasio" },
+    { profesor: "Profesor: Karen Cea", nombre: "Entrenamiento Funcional", area: "Fitness", horario: ["Martes 13:40 - 14:40"], lugar: "Gimnasio"},
+    { profesor: "Profesor: Haruko Tsukame Saez", nombre: "Salsa", area: "Artísticos y Culturales", horario: ["Jueves: 12:25 - 14:25"], lugar:"Gimnasio"},
+    { profesor: "Profesor: Haruko Tsukame Saez", nombre: "Danza", area: "Artísticos y Culturales", horario: ["Jueves: 12:15 - 13:25"], lugar: "Gimnasio "},
+    { profesor: "Profesor: José Gallardo Hurtado", nombre: "Teatro", area: "Artísticos y Culturales", horario: ["Martes: 12:15 - 13:25 "], lugar: "Belloto 1"}
+
   ],
   "San Joaquín": [
-    { nombre: "Tenis de Mesa", area: "Deportivo", horario: ["Lunes 17:00–18:30", "Miércoles 17:00–18:30"], lugar: "Gimnasio San Joaquín" },
-    { nombre: "Básquetbol 3x3", area: "Deportivo", horario: ["Martes 17:00–18:30", "Jueves 17:00–18:30"], lugar: "Multicancha" },
-    { nombre: "Karate", area: "Deportivo", horario: ["Martes 19:00–20:30", "Jueves 19:00–20:30"], lugar: "Sala de Artes Marciales" },
-    { nombre: "Futsal", area: "Deportivo", horario: ["Lunes 19:00–20:30", "Miércoles 19:00–20:30"], lugar: "Gimnasio San Joaquín" },
-    { nombre: "Spinning", area: "Acondicionamiento", horario: ["Martes 13:00–14:00", "Jueves 13:00–14:00"], lugar: "Sala de Spinning" },
-    { nombre: "Zumba", area: "Bienestar", horario: ["Viernes 13:00–14:00"], lugar: "Sala Multiuso" },
+    { profesor: "Profesora: Isabel Castillo Barrera", nombre: "Tenis de Mesa", area: "Deportivo", horario: ["Jueves: 17:30 - 18:40"], lugar: "Gimnasio" },
+    { profesor: "Profesor: Felipe Reyes Sangermani", nombre: "Básquetbol 3x3", area: "Deportivo", horario: ["Martes: 12:30 - 13:40"], lugar: "Gimnasio" },
+    { profesor: "Profesor: Patricio Cifra Abarca", nombre: "Karate", area: "Deportivo", horario: ["Jueves: 13:40 - 14:40"], lugar: "Gimnasio" },
+    { profesor: "Profesor: Jose Silva Albornoz", nombre: "Futsal", area: "Deportivo", horario: ["Miércoles: 17:30 - 18:40"], lugar: "Gimnasio" },
+    { profesor: "Profesor: José Sanchez Maldonado", nombre: "Balonmano", area: "Deportivo", horario:["Viernes: 13:40 - 14:40"], lugar: "Gimnasio"},
+    { profesor: "Profesor: Luis Bugueño Lizana", nombre: "Vóleibol Playa", area: "Deportivo", horario:["Jueves: 17:30 - 18:40"], lugar: "Cancha Vóleibol Playa"},
+    { profesor: "Profesor: Luis Bugueño Lizana", nombre: "Vóleibol", area: "Deportivo", horario: ["Martes: 13:40 - 14:40 y 17:30 - 18:40"], lugar: "Gimnasio"},
+    { profesor: "Profesora: Karen Cea", nombre: "Entrenamiento Funcional", area: "Fitness", horario: ["Lunes: 13:40 - 14:40", "Jueves: 12:30 - 13:30"], lugar: "Gimnasio"},
+    { profesor: "Profesora: Valeska Ahumada", nombre: "Spinning", area: "Fitness", horario: ["Lunes: 12:30 a 13:30","Jueves: 12:30 a 13:30"], lugar: "Sala de Spinning" },
+    { profesor: "Profesor: Haruko Tsukame Saez", nombre: "Salsa", area: "Artísticos y Culturales", horario: ["Viernes: 12:15 - 13:25"], lugar:"Sala Multiuso"},
+    { profesor: "Profesor: Haruko Tsukame Saez", nombre: "Danza", area: "Artísticos y Culturales", horario: ["Martes: 12:15 - 13:25", "Viernes: 15:00 - 17:00"], lugar: "Sala Multiuso"},
+    { profesor: "Profesor: Haruko Tsukame Saez", nombre: "Folclor", area: "Artísticos y Culturales", horario: ["Martes: 13:25 - 14:25","Viernes 17:30 - 19:40"], lugar: "Sala Multiuso"},
+    { profesor: "Profesor: José Gallardo Hurtado", nombre: "Teatro", area: "Artísticos y Culturales", horario: ["Jueves: 12:15 - 13:25"], lugar: "TAM"}
   ],
 };
 

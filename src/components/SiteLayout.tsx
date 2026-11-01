@@ -116,7 +116,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               </div>
             ))}
             <div className="flex flex-col items-start gap-8 lg:items-end">
-              <a href="#" className="block w-56 rounded-2xl border-2 border-primary-foreground p-5 text-center">
+              <a className="block w-56 rounded-2xl border-2 border-primary-foreground p-5 text-center">
                 <div className="text-xs">Comisión Nacional de Acreditación · CNA-Chile</div>
                 <div className="my-3 border-t border-primary-foreground/50" />
                 <div className="flex items-center justify-center gap-2">
