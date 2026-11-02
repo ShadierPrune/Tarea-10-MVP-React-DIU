@@ -95,7 +95,7 @@ export const servicios: Servicio[] = [
     slug: "canchas",
     nombre: "Canchas de fútbol y tenis",
     descripcion: "Reserva una cancha de fútbol o de tenis por 1 hora.",
-    opciones: ["Cancha de fútbol", "Cancha de tenis 1", "Cancha de tenis 2"],
+    opciones: ["Cancha de fútbol 1", "Cancha de fútbol 2", "Cancha de tenis"],
     bloques: ["09:00", "10:00", "11:00", "12:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"],
     cupos: 1,
   },

@@ -21,35 +21,79 @@ const nav = [
 const footerCols = [
   {
     groups: [
-      { title: "Universidad", links: ["Nuestra Historia", "Federico Santa María", "Definiciones Estratégicas", "Modelo Educativo", "Organización", "Información Estadística USM"] },
-      { title: "Campus y Sedes", links: ["Información Campus y Sedes", "Tour Virtual"] },
+      {
+        title: "Universidad",
+        links: [
+          { id: "historia", label: "Nuestra Historia", href: "https://usm.cl/universidad/historia/" },
+          { id: "federico", label: "Federico Santa María", href: "https://usm.cl/universidad/federico-santa-maria/biografia/" },
+          { id: "definiciones", label: "Definiciones Estratégicas", href: "https://usm.cl/universidad/plan-estrategico/" },
+          { id: "modelo", label: "Modelo Educativo", href: "https://usm.cl/universidad/modelo-educativo/contexto/" },
+          { id: "organizacion", label: "Organización", href: "https://usm.cl/universidad/rectoria/" },
+          { id: "informacion", label: "Información Estadística USM", href: "https://usm.cl/admision/indicadores-institucionales/" },
+        ]
+      },
+      {
+        title: "Campus y Sedes",
+        links: [
+          { id: "info", label: "Información Campus y Sedes", href: "https://usm.cl/universidad/campus-y-sedes/" },
+          { id: "tour", label: "Tour Virtual", href: "https://tour360.usm.cl/" },
+        ]
+      },
     ],
   },
   {
     groups: [
-      { title: "Extensión y Cultura", links: ["Dirección de Comunicaciones Estratégicas y Extensión Cultural", "Dirección General de Vinculación con el Medio", "Oficina de Asuntos Internacionales", "Red de Ex-Alumnos", "Noticias USM", "Eventos USM", "Radio USM", "Cultura USM"] },
+      { title: "Extensión y Cultura", 
+        links: [
+          { id: "comunicacion", label: "Dirección de Comunicaciones Estratégicas y Extensión Cultural",  href: "https://comunicaciones.usm.cl/" },
+          { id: "vinculacion", label: "Dirección General de Vinculación con el Medio",  href: "https://vinculacion.usm.cl/" }, 
+          { id: "internacional", label: "Oficina de Asuntos Internacionales",  href: "https://oai.usm.cl/" },
+          { id: "exalumnos", label: "Red de Ex-Alumnos",  href: "https://www.exalumnos.usm.cl/" },
+          { id: "noticias", label: "Noticias USM",  href: "https://usm.cl/noticias/" },
+          { id: "eventos", label: "Eventos USM",  href: "https://usm.cl/eventos/" },
+          { id: "radio", label: "Radio USM",  href: "https://radio.usm.cl/" },
+          { id: "cultura", label: "Cultura USM",  href: "https://cultura.usm.cl/" },
+        ] 
+      },
     ],
   },
   {
     groups: [
-      { title: "Servicios", links: ["Aula USM", "Biblioteca USM", "Portal de Autoservicio Institucional", "Dirección de Tecnologías de la Información", "Portal de Reportes UDAI", "Sistema de Información de Gestión Académica", "Sistema Integrado de Información Argos ERP", "Sistema de Remuneraciones Históricas", "Directorio USM", "Trabaja con nosotros"] },
+      { title: "Servicios", 
+        links: [
+          { id: "aula", label: "Aula USM",  href: "https://aula.usm.cl/" },
+          { id: "biblio", label: "Biblioteca USM",  href: "https://biblioteca.usm.cl/" },
+          { id: "autoservicio", label: "Portal de Autoservicio Institucional",  href: "https://ssb.usm.cl/" },
+          { id: "tecnologia", label: "Dirección de Tecnologías de la Información",  href: "https://dti.usm.cl/" },
+          { id: "reportes", label: "Portal de Reportes UDAI",  href: "http://www.portalreportes.usm.cl/" },
+          { id: "siga", label: "Sistema de Información de Gestión Académica",  href: "https://siga.usm.cl/pag/" },
+          { id: "siia", label: "Sistema Integrado de Información Argos ERP",  href: "https://argos-erp.usm.cl/" },
+          { id: "srh", label: "Sistema de Remuneraciones Históricas",  href: "https://srh.usm.cl/" },
+          { id: "directorio", label: "Directorio USM",  href: "https://directorio.usm.cl/" },
+          { id: "trabaja", label: "Trabaja con nosotros",  href: "https://usm.hiringroom.com/jobs" },
+        ] 
+      },
     ],
   },
 ];
 
-// Logos de convenios, en el orden de izquierda a derecha.
-// href: reemplazar "#" por la URL real de cada institución.
 const partners = [
-  { name: "ACCESO Educación Superior", img: acceso, h: "h-12", href: "#" },
-  { name: "Consejo de Rectores de las Universidades Chilenas", img: consejoRectores, h: "h-16", href: "#" },
-  { name: "G9 Universidades Públicas no Estatales", img: g9, h: "h-12", href: "#" },
-  { name: "Agrupación de Universidades Regionales de Chile", img: aur, h: "h-12", href: "#" },
-  { name: "Consejo de Rectores de Valparaíso", img: cruv, h: "h-14", href: "#" },
-  { name: "REUNA Ciencia y Educación en Red", img: reuna, h: "h-12", href: "#" },
-  { name: "universia", img: universia, h: "h-10", href: "#" },
+  { name: "ACCESO Educación Superior", img: acceso, h: "h-12", href: "https://acceso.mineduc.cl/" },
+  { name: "Consejo de Rectores de las Universidades Chilenas", img: consejoRectores, h: "h-16", href: "https://www.consejoderectores.cl/" },
+  { name: "G9 Universidades Públicas no Estatales", img: g9, h: "h-12", href: "https://redg9.cl/" },
+  { name: "Agrupación de Universidades Regionales de Chile", img: aur, h: "h-12", href: "https://www.auregionales.cl/" },
+  { name: "Consejo de Rectores de Valparaíso", img: cruv, h: "h-14", href: "https://consejoderectoresvalparaiso.cl/" },
+  { name: "REUNA Ciencia y Educación en Red", img: reuna, h: "h-12", href: "https://www.reuna.cl/" },
+  { name: "universia", img: universia, h: "h-10", href: "https://www.universia.net/cl/home.html" },
 ] as const;
 
-const socials = [Facebook, Twitter, Youtube, Instagram, Linkedin];
+const socials = [
+  { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/usantamaria" },
+  { name: "Twitter", icon: Twitter, href: "https://twitter.com/usantamaria" },
+  { name: "Youtube", icon: Youtube, href: "https://www.youtube.com/channel/UCr5rEvayXIC0YnJxDAWuWtQ" },
+  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/usantamaria/" },
+  { name: "Linkedin", icon: Linkedin, href: "https://www.linkedin.com/school/usantamaria/" },
+];
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
@@ -108,7 +152,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                     <h3 className="mb-4 text-lg font-bold uppercase">{g.title}</h3>
                     <ul className="space-y-1.5">
                       {g.links.map((l) => (
-                        <li key={l}><a href="#" className="hover:underline">{l}</a></li>
+                        <li key={l.id}><a href={l.href} className="hover:underline">{l.label}</a></li>
                       ))}
                     </ul>
                   </div>
@@ -131,8 +175,15 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               <div className="text-center">
                 <a href="https://usm.cl" target="_blank" rel="noreferrer" className="text-5xl font-extrabold">usm.cl</a>
                 <div className="mt-3 flex gap-2">
-                  {socials.map((Icon, i) => (
-                    <a key={i} href="#" aria-label="Red social" className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground text-primary">
+                  {socials.map(({ name, icon: Icon, href }) => (
+                    <a 
+                      key={name} 
+                      href={href} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      aria-label={name} 
+                      className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground text-primary transition-transform hover:scale-105"
+                    >
                       <Icon className="h-4 w-4" />
                     </a>
                   ))}

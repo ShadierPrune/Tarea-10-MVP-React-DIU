@@ -58,8 +58,7 @@ function Page() {
       </div>
     );
 
-  const field = "w-full rounded-md border bg-background px-3 py-2 outline-none focus:ring-2 focus:ring-ring";
-  return (
+  const field = "w-full rounded-md border-2 border-neutral-400 bg-background px-3 py-2 outline-none focus:ring-2 focus:ring-ring";  return (
     <div className="mx-auto max-w-4xl px-4 py-10">
       <Link to="/reservas" className="inline-flex items-center gap-2 text-sm text-primary"><ArrowLeft className="h-4 w-4" />Todas las reservas</Link>
       <h1 className="bar-accent mt-4 text-3xl font-extrabold">Reserva {s.nombre.toLowerCase()}</h1>
@@ -89,7 +88,7 @@ function Page() {
           <div className="mt-2 flex flex-wrap gap-2">
             {days.map((d, i) => (
               <button type="button" key={i} onClick={() => { setDia(i); setBloque(null); }}
-                className={`rounded-lg border px-4 py-2 text-sm capitalize ${dia === i ? "border-primary bg-primary text-primary-foreground" : "hover:bg-secondary"}`}>
+                className={`rounded-lg border-2 border-neutral-400 px-4 py-2 text-sm capitalize ${dia === i ? "border-primary bg-primary text-primary-foreground" : "hover:bg-secondary"}`}>
                 {d.toLocaleDateString("es-CL", { weekday: "short", day: "numeric" })}
               </button>
             ))}
@@ -101,7 +100,7 @@ function Page() {
           <div className="mt-2 grid grid-cols-3 gap-2 sm:grid-cols-6">
             {s.bloques.map((b) => (
               <button type="button" key={b} onClick={() => setBloque(b)}
-                className={`rounded-lg border py-2 text-sm font-medium ${bloque === b ? "border-accent bg-accent text-accent-foreground" : "hover:bg-secondary"}`}>
+                className={`rounded-lg border-2 border-neutral-400 py-2 text-sm font-medium ${bloque === b ? "border-accent bg-accent text-accent-foreground" : "hover:bg-secondary"}`}>
                 {b}
               </button>
             ))}
@@ -121,7 +120,13 @@ function Page() {
           </label>
         </div>
 
-        <button disabled={!valid} className="rounded-md bg-primary px-8 py-3 font-bold text-primary-foreground transition-opacity disabled:opacity-40">
+        <button 
+          disabled={!valid} 
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="rounded-md bg-primary px-8 py-3 font-bold text-primary-foreground transition-all duration-200 hover:bg-primary/90 hover:shadow-lg disabled:opacity-40"
+        >
           Confirmar reserva
         </button>
       </form>
